@@ -17,11 +17,11 @@ var answerB = "b";
 var answerC = "c";
 // A function that resets the points of all tracks when called. Intended to before trackScoring.
 var scoreReset = function() {
-  var rubyScore = 0;
-  var phpScore = 0;
-  var javaScore = 0;
-  var cssScore = 0;
-  var cSharpScore = 0;
+  rubyScore = 0;
+  phpScore = 0;
+  javaScore = 0;
+  cssScore = 0;
+  cSharpScore = 0;
 }
 // Assigns the variables to the values for the questions they're named after. Intended to run before trackScoring.
 var pullAnswers = function() {
@@ -34,7 +34,6 @@ var pullAnswers = function() {
 }
 // Goes through the questions and sets appropriate scores.
 var trackScoring = function(surveyAnswer) {
-
   if(companySize === answerA) {
     rubyScore = rubyScore + 2;
     cssScore = cssScore + 2;
@@ -96,6 +95,7 @@ $(function() {
     event.preventDefault();
 
     scoreReset();
+    pullAnswers();
     trackScoring();
 
   });
