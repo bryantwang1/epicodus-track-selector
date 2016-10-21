@@ -35,53 +35,53 @@ var pullAnswers = function() {
 // Goes through the questions and sets appropriate scores.
 var trackScoring = function(surveyAnswer) {
 
-  if(companySize = surveyA) {
+  if(companySize = answerA) {
     rubyScore = rubyScore + 2;
     cssScore = cssScore + 2;
-  } else if(companySize = surveyB) {
+  } else if(companySize = answerB) {
     phpScore = phpScore + 2;
     javaScore = javaScore + 2;
     cssScore = cssScore + 2;
     cSharpScore = cSharpScore + 2;
   } else {};
 
-  if(webOrNot = surveyA) {
-    ("#yes-on-websites").show();
-    ("#result-message").text("Please fill out the highlighted question we just added.");
+  if(webOrNot = answerA) {
+    $("#yes-on-websites").show();
+    $("#result-message").text("Please fill out the highlighted question we just added.");
     rubyScore = rubyScore + 2;
     phpScore = phpScore + 2;
     cssScore = cssScore + 2;
-  } else if(webOrNot = surveyB) {
-    ("#yes-on-websites").hide();
-    ("#result-message").hide();
-    ("#result-message").text();
+  } else if(webOrNot = answerB) {
+    $("#yes-on-websites").hide();
+    $("#result-message").hide();
+    $("#result-message").text();
     javaScore = javaScore + 2;
     cSharpScore = cSharpScore + 2;
   } else {};
 
-  if(website = surveyA) {
+  if(website = answerA) {
     rubyScore = rubyScore + 1;
-  } else if(website = surveyB) {
+  } else if(website = answerB) {
     phpScore = phpScore + 1;
-  } else if(website = surveyC) {
+  } else if(website = answerC) {
     cssScore = cssScore + 1;
   } else {};
 
-  if(userJob = surveyA) {
+  if(userJob = answerA) {
     cssScore = cssScore + 2;
     rubyScore = rubyScore + 2;
-  } else if(userJob = surveyB) {
+  } else if(userJob = answerB) {
     phpScore = phpScore + 2;
-  } else if(userJob = surveyC) {
+  } else if(userJob = answerC) {
     cSharpScore = cSharpScore + 2;
     javaScore = javaScore + 2;
   } else{};
 
-  if(phoneUse = surveyA) {
+  if(phoneUse = answerA) {
     javaScore = javaScore + 2;
-  } else if(phoneUse = surveyB) {
+  } else if(phoneUse = answerB) {
     javaScore = javaScore + 1;
-  } else if(phoneUse = surveyC) {
+  } else if(phoneUse = answerC) {
     rubyScore = rubyScore + 2;
     phpScore = phpScore + 2;
     cssScore = cssScore + 2;
@@ -96,6 +96,7 @@ $(function() {
     event.preventDefault();
 
     scoreReset();
+    trackScoring();
 
   });
 });
