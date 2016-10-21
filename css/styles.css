@@ -13,3 +13,16 @@
 .red-text {
   color: red;
 }
+
+.panel-success {
+  margin-top: 2vh;
+  background-color: lightgray;
+}
+
+.panel-success h2 {
+  margin: 2vmax;
+}
+
+h1 {
+  text-align: center;
+}
