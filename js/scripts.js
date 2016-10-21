@@ -63,6 +63,9 @@ var trackScoring = function(surveyAnswer) {
     $("#yes-on-websites").hide();
     javaScore = javaScore + 2;
     cSharpScore = cSharpScore + 2;
+    rubyScore = rubyScore - 2;
+    phpScore = phpScore - 2;
+    cssScore = cssScore - 2;
   } else {};
 
   if(website === answerA) {
@@ -153,7 +156,7 @@ var trackEvaluate = function() {
     } else if(cssScore === rubyScore) {
       $(".track-result").show();
       $(".name-insert").text(userName);
-      $(".language-result").text("you seem to lean toward web technologies, you should take the CSS/Design or Ruby/Rails track");
+      $(".language-result").text("you seem to lean toward web technologies the most, you should consider taking the CSS/Design or Ruby/Rails track");
       $("#score-list").hide();
     } else {
       $(".track-result").show();
