@@ -11,8 +11,11 @@ var webOrNot;
 var website;
 var userJob;
 var phoneUse;
-var
-// A function that resets the points of all tracks when called. Intended to run before any other function.
+// Variables for each possible answer so that code is less confusing, e.g. being clear that "a" is a survey answer.
+var answerA = "a";
+var answerB = "b";
+var answerC = "c";
+// A function that resets the points of all tracks when called. Intended to before trackScoring.
 var scoreReset = function() {
   var rubyScore = 0;
   var phpScore = 0;
@@ -20,16 +23,71 @@ var scoreReset = function() {
   var cssScore = 0;
   var cSharpScore = 0;
 }
-//
-var trackScoring = function(surveyResponse) {
-  // Creates scope-limited variables to temporarily record points, and assigns them to the appropriate tracks at the end of the function.
-  var trackRuby = 0;
-  var trackPhp = 0;
-  var trackJava = 0;
-  var trackCss = 0;
-  var trackCSharp = 0;
-
+// Assigns the variables to the values for the questions they're named after. Intended to run before trackScoring.
+var pullAnswers = function() {
+  userName = $("#user-name").val();
+  companySize = $("input:radio[name=company-size]:checked").val();
+  webOrNot = $("input:radio[name=web-or-not]:checked").val();
+  website = $("input:radio[name=website]:checked").val();
+  userJob = $("input:radio[name=user-job]:checked").val();
+  phoneUse = $("input:radio[name=phone-use]:checked").val();
 }
+// Goes through the questions and sets appropriate scores.
+var trackScoring = function(surveyAnswer) {
+
+  if(companySize = surveyA) {
+    rubyScore = rubyScore + 2;
+    cssScore = cssScore + 2;
+  } else if(companySize = surveyB) {
+    phpScore = phpScore + 2;
+    javaScore = javaScore + 2;
+    cssScore = cssScore + 2;
+    cSharpScore = cSharpScore + 2;
+  } else {};
+
+  if(webOrNot = surveyA) {
+    ("#yes-on-websites").show();
+    ("#result-message").text("Please fill out the highlighted question we just added.");
+    rubyScore = rubyScore + 2;
+    phpScore = phpScore + 2;
+    cssScore = cssScore + 2;
+  } else if(webOrNot = surveyB) {
+    ("#yes-on-websites").hide();
+    ("#result-message").hide();
+    ("#result-message").text();
+    javaScore = javaScore + 2;
+    cSharpScore = cSharpScore + 2;
+  } else {};
+
+  if(website = surveyA) {
+    rubyScore = rubyScore + 1;
+  } else if(website = surveyB) {
+    phpScore = phpScore + 1;
+  } else if(website = surveyC) {
+    cssScore = cssScore + 1;
+  } else {};
+
+  if(userJob = surveyA) {
+    cssScore = cssScore + 2;
+    rubyScore = rubyScore + 2;
+  } else if(userJob = surveyB) {
+    phpScore = phpScore + 2;
+  } else if(userJob = surveyC) {
+    cSharpScore = cSharpScore + 2;
+    javaScore = javaScore + 2;
+  } else{};
+
+  if(phoneUse = surveyA) {
+    javaScore = javaScore + 2;
+  } else if(phoneUse = surveyB) {
+    javaScore = javaScore + 1;
+  } else if(phoneUse = surveyC) {
+    rubyScore = rubyScore + 2;
+    phpScore = phpScore + 2;
+    cssScore = cssScore + 2;
+    cSharpScore = cSharpScore + 2;
+  } else {};
+};
 
 // Back-end/business logic goes above, front-end/ui goes below this line
 
