@@ -35,23 +35,23 @@ var pullAnswers = function() {
 // Goes through the questions and sets appropriate scores.
 var trackScoring = function(surveyAnswer) {
 
-  if(companySize = answerA) {
+  if(companySize === answerA) {
     rubyScore = rubyScore + 2;
     cssScore = cssScore + 2;
-  } else if(companySize = answerB) {
+  } else if(companySize === answerB) {
     phpScore = phpScore + 2;
     javaScore = javaScore + 2;
     cssScore = cssScore + 2;
     cSharpScore = cSharpScore + 2;
   } else {};
 
-  if(webOrNot = answerA) {
+  if(webOrNot === answerA) {
     $("#yes-on-websites").show();
     $("#result-message").text("Please fill out the highlighted question we just added.");
     rubyScore = rubyScore + 2;
     phpScore = phpScore + 2;
     cssScore = cssScore + 2;
-  } else if(webOrNot = answerB) {
+  } else if(webOrNot === answerB) {
     $("#yes-on-websites").hide();
     $("#result-message").hide();
     $("#result-message").text();
@@ -59,29 +59,29 @@ var trackScoring = function(surveyAnswer) {
     cSharpScore = cSharpScore + 2;
   } else {};
 
-  if(website = answerA) {
+  if(website === answerA) {
     rubyScore = rubyScore + 1;
-  } else if(website = answerB) {
+  } else if(website === answerB) {
     phpScore = phpScore + 1;
-  } else if(website = answerC) {
+  } else if(website === answerC) {
     cssScore = cssScore + 1;
   } else {};
 
-  if(userJob = answerA) {
+  if(userJob === answerA) {
     cssScore = cssScore + 2;
     rubyScore = rubyScore + 2;
-  } else if(userJob = answerB) {
+  } else if(userJob === answerB) {
     phpScore = phpScore + 2;
-  } else if(userJob = answerC) {
+  } else if(userJob === answerC) {
     cSharpScore = cSharpScore + 2;
     javaScore = javaScore + 2;
   } else{};
 
-  if(phoneUse = answerA) {
+  if(phoneUse === answerA) {
     javaScore = javaScore + 2;
-  } else if(phoneUse = answerB) {
+  } else if(phoneUse ===answerB) {
     javaScore = javaScore + 1;
-  } else if(phoneUse = answerC) {
+  } else if(phoneUse === answerC) {
     rubyScore = rubyScore + 2;
     phpScore = phpScore + 2;
     cssScore = cssScore + 2;
