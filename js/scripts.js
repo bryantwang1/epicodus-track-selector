@@ -56,14 +56,14 @@ var trackScoring = function() {
   if(webOrNot === answerA) {
     websiteAnswered = false;
     websiteOpen = true;
-    $("#yes-on-websites").show();
+    $("#yes-on-websites").slideDown();
     rubyScore = rubyScore + 2;
     phpScore = phpScore + 2;
     cssScore = cssScore + 2;
   } else if(webOrNot === answerB) {
     websiteAnswered = true;
     websiteOpen = false;
-    $("#yes-on-websites").hide();
+    $("#yes-on-websites").slideUp();
     javaScore = javaScore + 2;
     cSharpScore = cSharpScore + 2;
     rubyScore = rubyScore - 2;
