@@ -27,6 +27,9 @@ var scoreReset = function() {
 // Assigns the variables to the values for the questions they're named after. Intended to run before trackScoring.
 var pullAnswers = function() {
   userName = $("#user-name").val();
+  if(userName === "") {
+    userName = "Hi";
+  } else {};
   companySize = $("input:radio[name=company-size]:checked").val();
   webOrNot = $("input:radio[name=web-or-not]:checked").val();
   website = $("input:radio[name=website]:checked").val();
