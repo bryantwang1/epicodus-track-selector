@@ -1,4 +1,4 @@
-.track-result, #yes-on-websites, #please-answer {
+.track-result, #yes-on-websites, #please-answer, #result-message {
   display: none;
 }
 
@@ -8,4 +8,8 @@
 
 #yes-on-websites {
   background-color: lightgreen;
+}
+
+.red-text {
+  color: red;
 }
