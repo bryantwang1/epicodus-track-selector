@@ -109,27 +109,44 @@
           </label>
         </div>
 
-        <!-- Place to add a sixth question if I think of one (though would be fifth if the user answers no to question 2)
-          <p id="radio-header">Filler question?</p>
+        <p id="radio-header">Which answer describes you most? If you had to choose one thing to do all day, you would:</p>
         <div class="radio">
           <label>
-            <input type="radio" name="@" value="a" checked>
-            Filler
+            <input type="radio" name="preference" value="a" checked>
+            Work on solving a large, complicated task.
           </label>
         </div>
         <div class="radio">
           <label>
-            <input type="radio" name="@" value="b">
-            Filler
+            <input type="radio" name="preference" value="b">
+            Engage in creative pursuits, e.g. drawing, painting, making music.
           </label>
-        </div> -->
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="preference" value="c">
+            Use my smartphone.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="preference" value="d">
+            Organize or clean something, e.g. my house, my closet, Excel spreadsheets.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="preference" value="e">
+            Make surveys to give to people or observe people in public.
+          </label>
+        </div>
 
         <button type="submit" class="btn">Which track?</button>
       </form>
 
       <span id="result-message"><h1></h1></span>
       <div class="track-result">
-        <h2><span class="name-insert"></span>, <span class="language-result"></span>.</h2>
+        <h2>Hi <span class="name-insert"></span>, <span class="language-result"></span>.</h2>
         <ul id="score-list">
           <li id="csharp-score"></li>
           <li id="css-score"></li>
