@@ -124,39 +124,39 @@ var trackEvaluate = function() {
     $("#result-message").hide();
     $("#result-message").text();
     $("#result-message").removeClass("red-text");
-    $(".track-result").hide();
+    $(".track-result").slideUp();
     if(cSharpScore > cssScore && cSharpScore > javaScore && cSharpScore > phpScore && cSharpScore > rubyScore) {
-      $(".track-result").show();
+      $(".track-result").slideDown();
       $(".name-insert").text(userName);
       $(".language-result").text("you should take the C#/.NET track");
       $("#score-list").hide();
     } else if(cssScore > cSharpScore && cssScore > javaScore && cssScore > phpScore && cssScore > rubyScore) {
-      $(".track-result").show();
+      $(".track-result").slideDown();
       $(".name-insert").text(userName);
       $(".language-result").text("you should take the CSS/Design track");
       $("#score-list").hide();
     } else if(javaScore > cssScore && javaScore > cSharpScore && javaScore > phpScore && javaScore > rubyScore) {
-      $(".track-result").show();
+      $(".track-result").slideDown();
       $(".name-insert").text(userName);
       $(".language-result").text("you should take the Java/Android track");
       $("#score-list").hide();
     } else if(phpScore > cssScore && phpScore > javaScore && phpScore > cSharpScore && phpScore > rubyScore) {
-      $(".track-result").show();
+      $(".track-result").slideDown();
       $(".name-insert").text(userName);
       $(".language-result").text("you should take the PHP/Drupal track");
       $("#score-list").hide();
     } else if(rubyScore > cssScore && rubyScore > javaScore && rubyScore > phpScore && rubyScore > cSharpScore) {
-      $(".track-result").show();
+      $(".track-result").slideDown();
       $(".name-insert").text(userName);
       $(".language-result").text("you should take the Ruby/Rails track");
       $("#score-list").hide();
     } else if(cssScore === rubyScore) {
-      $(".track-result").show();
+      $(".track-result").slideDown();
       $(".name-insert").text(userName);
       $(".language-result").text("you seem to lean toward web technologies the most, you should consider taking the CSS/Design or Ruby/Rails track");
       $("#score-list").hide();
     } else {
-      $(".track-result").show();
+      $(".track-result").slideDown();
       $(".name-insert").text(userName);
       $(".language-result").text("you've scored the same in more than one track, so we've only narrowed it down a little for you. Here are your scores so you can see which tracks you lean toward.");
       $("#score-list").show();
@@ -171,7 +171,7 @@ var trackEvaluate = function() {
     $("#result-message").show();
     $("#result-message").text("Please fill out the highlighted question we just added.");
     $("#result-message").addClass("red-text");
-    $(".track-result").hide();
+    $(".track-result").slideUp();
   };
 };
 
