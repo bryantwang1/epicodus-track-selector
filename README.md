@@ -18,7 +18,7 @@ _This project uses jQuery, a JS library, and Bootstrap, a framework for HTML, CS
 
 ## Contact details
 
-_If you notice a mistake or want to make a suggestion, contact me at: bryant.m.wang@gmail.com _
+_If you notice a mistake or want to make a suggestion, contact me at: bryant.m.wang@gmail.com_
 
 ### License
 
