@@ -60,11 +60,16 @@ var trackScoring = function(surveyAnswer) {
 
   if(website === answerA) {
     rubyScore = rubyScore + 1;
+    $("#please-answer").hide();
   } else if(website === answerB) {
     phpScore = phpScore + 1;
+    $("#please-answer").hide();
   } else if(website === answerC) {
     cssScore = cssScore + 1;
-  } else {};
+    $("#please-answer").hide();
+  } else {
+    $("#please-answer").show();
+  };
 
   if(userJob === answerA) {
     cssScore = cssScore + 2;
